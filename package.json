@@ -1,0 +1,27 @@
+{
+  "name": "nutrients-calculator",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "parcel src/index.html --open",
+    "lint": "eslint src/"
+  },
+  "repository": "git@github.com:socunanena/nutrients-calculator.git",
+  "author": "Natàlia Calvet i Vidal <natalia.cavi@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-vue": "^2.0.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jest": "^21.15.1",
+    "eslint-plugin-vue": "^4.5.0",
+    "parcel-bundler": "^1.8.1",
+    "parcel-plugin-eslint": "^1.0.4",
+    "parcel-plugin-vue": "^1.5.0"
+  }
+}

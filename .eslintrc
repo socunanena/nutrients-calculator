@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "airbnb-base"
+  ],
+  "plugins": [
+    "jest"
+  ],
+  "env": {
+    "jest": true
+  },
+  "rules": {},
+  "parserOptions": {
+    "ecmaVersion": 2017
+  }
+}
