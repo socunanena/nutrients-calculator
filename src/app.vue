@@ -14,6 +14,12 @@
     </select>
     <span>{{bmr}}</span>
     <span>{{tdee}}</span>
+    <span>Protein</span>
+    <input title="Protein" v-model.number="user.macronutrients.protein" />
+    <span>Fat</span>
+    <input title="Fat" v-model.number="user.macronutrients.fat" />
+    <span>Carbohydrates</span>
+    <input title="Carbohydrates" v-model.number="user.macronutrients.carbohydrates" />
   </div>
 </template>
 
@@ -54,6 +60,23 @@
         this.user.calories.tdee = tdee;
 
         return tdee;
+      },
+      carbohydrates: function () {
+        const carbohydrates = this.user.calories.tdee
+          && this.user.goal
+          && this.user.macronutrients.protein
+          && this.user.macronutrients.fat
+          && Math.round(
+            (
+              this.user.calories.tdee * ((100 - this.user.goal) / 100)
+              - (this.user.macronutrients.protein * 4)
+              - (this.user.macronutrients.fat * 9)
+            ) / 4
+          );
+
+        this.user.macronutrients.carbohydrates = carbohydrates;
+
+        return carbohydrates;
       },
     },
   };
